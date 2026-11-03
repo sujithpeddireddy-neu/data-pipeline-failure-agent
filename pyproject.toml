@@ -13,6 +13,10 @@ dependencies = [
     "pyarrow",
     "great_expectations",
 ]
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
