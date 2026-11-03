@@ -1,0 +1,18 @@
+# CS6170 Data Pipeline Failure Agent
+# Custom Apache Airflow environment
+
+ARG AIRFLOW_BASE_IMAGE=apache/airflow:2.8.4-python3.10
+
+FROM ${AIRFLOW_BASE_IMAGE}
+
+USER airflow
+
+# Install only the additional dependencies required by CS6170.
+# Preserve existing Airflow and MLOps dependencies.
+
+RUN python -m pip install --no-cache-dir \
+    "duckdb==1.2.2" \
+    "great_expectations==1.9.0"
+
+# Verify our required libraries can be imported.
+RUN python -c "import airflow, duckdb, great_expectations; assert airflow.__version__ == '2.8.4'; print('CS6170 dependencies verified')"
