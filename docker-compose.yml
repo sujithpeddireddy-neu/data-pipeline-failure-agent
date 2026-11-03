@@ -1,0 +1,4 @@
+# Docker services will be configured during infrastructure setup.
+name: pipefail
+
+services: {}
