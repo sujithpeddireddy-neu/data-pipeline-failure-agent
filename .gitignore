@@ -25,8 +25,8 @@ dist/
 /data/smoke_test/
 
 # Other local data directories
-/data/raw/
-/data/processed/
+# Original TLC data managed by DVC
+/data/raw/yellow_taxi//data/processed/
 /data/experiments/
 /data/profiles/
 /data/models/
