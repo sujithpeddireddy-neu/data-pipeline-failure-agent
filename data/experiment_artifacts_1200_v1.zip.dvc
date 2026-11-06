@@ -1,0 +1,5 @@
+outs:
+- md5: af042a0c00c146e39ee62e13cb13b062
+  size: 68328377
+  hash: md5
+  path: experiment_artifacts_1200_v1.zip
