@@ -21,7 +21,15 @@ dist/
 *.egg-info/
 
 # Datasets and database files
-data/
+# DVC-managed datasets
+/data/smoke_test/
+
+# Other local data directories
+/data/raw/
+/data/processed/
+/data/experiments/
+/data/profiles/
+/data/models/
 datasets/
 *.parquet
 *.csv
