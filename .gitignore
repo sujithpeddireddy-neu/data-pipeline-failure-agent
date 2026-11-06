@@ -57,3 +57,5 @@ results/*
 .idea/
 .DS_Store
 Thumbs.db
+
+/data/benchmark_1200_v1/
