@@ -1,0 +1,15 @@
+label,file_missing,schema_comparison_available,missing_column_count,added_column_count,type_change_count,row_count_available,row_count_change_pct,max_null_rate_increase_pp,max_null_rate_decrease_pp,invalid_rate_available,invalid_distance_increase_pp,distance_probe_failed,revenue_probe_failed,arrival_available,late_arrival_minutes,late_arrival_flag
+F1,0,1,1,1,0,1,0.0,0.0,0.0,0,0.0,1,0,0,0.0,0
+F1,0,1,1,1,0,1,0.0,0.0,0.0,1,0.0,0,1,0,0.0,0
+F5,0,1,0,0,0,1,0.0,0.0,0.0,1,2.9,0,0,0,0.0,0
+F6,0,1,0,0,0,1,0.0,0.0,0.0,1,0.0,0,0,1,30.0,1
+F2,0,1,0,0,1,1,0.0,0.0,0.0,1,0.0,0,1,0,0.0,0
+F5,0,1,0,0,0,1,0.0,0.0,0.0,1,3.3,0,0,0,0.0,0
+F2,0,1,0,0,1,1,0.0,0.0,0.0,0,0.0,1,0,0,0.0,0
+CLEAN,0,1,0,0,0,1,0.0,0.0,0.0,1,0.0,0,0,0,0.0,0
+CLEAN,0,1,0,0,0,1,0.0,0.0,0.0,1,0.0,0,0,0,0.0,0
+F3,0,1,0,0,0,1,0.0,23.7,0.0,1,0.0,0,0,0,0.0,0
+F4,0,1,0,0,0,1,-12.1,0.068,0.0,1,0.0,0,0,0,0.0,0
+F6,1,0,0,0,0,0,0.0,0.0,0.0,0,0.0,1,1,0,0.0,0
+F4,0,1,0,0,0,1,-63.9,0.5321,0.0,1,0.0,0,0,0,0.0,0
+F3,0,1,0,0,0,1,0.0,29.1,0.0,1,0.0,0,0,0,0.0,0

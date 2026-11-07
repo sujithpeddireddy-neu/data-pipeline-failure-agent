@@ -18,6 +18,12 @@ dev = [
     "pytest>=8,<10",
 ]
 
+ml = [
+    "lightgbm==4.7.0",
+    "scikit-learn",
+    "numpy",
+    "scipy",
+]
 [tool.setuptools.packages.find]
 where = ["src"]
 

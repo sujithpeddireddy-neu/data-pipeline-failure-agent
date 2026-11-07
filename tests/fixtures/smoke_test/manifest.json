@@ -1,0 +1,51 @@
+{
+  "name": "pipefail-smoke-test-v1",
+  "source_dataset": "batch_1200_v1",
+  "source_location_example": "C:\\Capstone\\datasets\\experiments\\batch_1200_v1",
+  "selection_method": "deterministic per-split balanced sampling without replacement; F6 includes missing and late cases",
+  "seed": 6170,
+  "split_counts": {
+    "train": 42,
+    "val": 14,
+    "test": 14
+  },
+  "samples_per_class_per_split": {
+    "train": 6,
+    "val": 2,
+    "test": 2
+  },
+  "feature_columns": [
+    "file_missing",
+    "schema_comparison_available",
+    "missing_column_count",
+    "added_column_count",
+    "type_change_count",
+    "row_count_available",
+    "row_count_change_pct",
+    "max_null_rate_increase_pp",
+    "max_null_rate_decrease_pp",
+    "invalid_rate_available",
+    "invalid_distance_increase_pp",
+    "distance_probe_failed",
+    "revenue_probe_failed",
+    "arrival_available",
+    "late_arrival_minutes",
+    "late_arrival_flag"
+  ],
+  "source_csv_sha256": {
+    "train": "870a13e7ec43b6290176c506fd8e8caa126cb32960a47087273a672c79d9d125",
+    "val": "afe36f214eab9b428e93aa447a5684295f4dc1275af491ebb16f287ed9d0bbc4",
+    "test": "59b29e1eb312beaca929262578eff8b7e55fd8fbf14d1d14d1897a3b052182b7"
+  },
+  "output_csv_sha256": {
+    "train": "5c3acd90d008fecf1a2503748b7428e019df7c2b4a3c1dcd233c8b6141eed7a4",
+    "val": "68152573ac9075c9dcd12a0f0cd4d903ccddd444e9892ce9fa4257dd9d84279f",
+    "test": "3da50840f8def8108c79b861a4d180de4104f6274c09545a2b181dba5e031747"
+  },
+  "notes": [
+    "All 16 feature columns are input features; label is the target and must not be used as input.",
+    "The original 1200-case benchmark is synthetic and contains repeated feature vectors.",
+    "Chronological splits are inherited from the source benchmark; this subset does not independently prove absence of leakage.",
+    "Smoke test is for workflow reproducibility, not representative model-performance estimation."
+  ]
+}
