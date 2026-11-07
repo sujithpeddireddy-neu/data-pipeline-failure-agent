@@ -22,12 +22,17 @@ def execute_in_sandbox(
     sandbox_dir: str | Path,
     *,
     max_bytes: int = 50 * 1024 * 1024,
+    expected_nullable: bool | None = None,
 ) -> SandboxResult:
     """Write ONLY a fresh .parquet under sandbox_dir; never touch source/live data.
 
     max_bytes is intentionally small for the no-credentials baseline demonstration.
     This is not a streaming repair engine for production-sized Parquet files.
     """
+    # Nullability must be copied from a trusted, pre-existing schema contract.
+    # Do NOT infer it from zero observed NULLs or the held-out clean test file.
+    if expected_nullable is not None and type(expected_nullable) is not bool:
+        return SandboxResult(proposal.incident_id, "FAILED", message="Invalid trusted nullability flag.")
     if proposal.status != "SANDBOX_ELIGIBLE" or proposal.action != RepairAction.CONVERT_TYPE:
         return SandboxResult(proposal.incident_id, "SKIPPED", message="No allowlisted sandbox trial.")
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", proposal.incident_id):
@@ -69,7 +74,16 @@ def execute_in_sandbox(
         arrow_type = {"double": pa.float64(), "float": pa.float32(),
                       "int64": pa.int64(), "int32": pa.int32()}[dst_type]
         casted = pc.cast(table.column(index), arrow_type, safe=True)
-        new_table = table.set_column(index, table.schema.field(index).with_type(arrow_type), casted)
+        source_field = table.schema.field(index)
+        target_nullable = (
+            source_field.nullable if expected_nullable is None else expected_nullable
+        )
+        if not target_nullable and casted.null_count:
+            raise ValueError("Non-nullable target contract conflicts with actual NULL values")
+        # Preserve original field metadata, but use the trusted nullability
+        # constraint when one is explicitly supplied.
+        target_field = source_field.with_type(arrow_type).with_nullable(target_nullable)
+        new_table = table.set_column(index, target_field, casted)
         pq.write_table(new_table, temp_path, compression="zstd")
         # The only created file is in sandbox root.
         temp_path.replace(target_path)

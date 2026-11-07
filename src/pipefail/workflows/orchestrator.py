@@ -25,6 +25,8 @@ def run_b0_workflow(
     candidate_parquet: str | Path | None = None,
     clean_reference_parquet: str | Path | None = None,
     thresholds: RuleThresholds | None = None,
+    trusted_nullability: Mapping[str, bool] | None = None,
+    schema_contract_id: str | None = None,
 ) -> dict:
     """Return and save a fully inspectable incident record, but NO approval.
 
@@ -32,6 +34,13 @@ def run_b0_workflow(
     The one B0 sandbox trial (F2) requires raw schema evidence and small local
     Parquet files. No reference == no validation pass.
     """
+    # Provenance is required for any declared contract. This cannot be
+    # populated from the held-out clean reference used by the validator.
+    if trusted_nullability is not None:
+        if not schema_contract_id or not schema_contract_id.strip():
+            raise ValueError("A trusted nullability override requires schema_contract_id")
+        if any(type(value) is not bool for value in trusted_nullability.values()):
+            raise ValueError("Trusted schema nullability values must be booleans")
     if not re.fullmatch(r"[A-Za-z0-9_-]{1,100}", incident_id):
         raise ValueError("Incident ID must contain only letters, numbers, _ or -")
     root = Path(output_dir)
@@ -44,9 +53,25 @@ def run_b0_workflow(
     proposal = propose_repair(diagnosis, raw_evidence)
     trial = None
     validation = None
+    contract_nullable = None
     if proposal.status == "SANDBOX_ELIGIBLE" and candidate_parquet is not None:
-        trial = execute_in_sandbox(proposal, candidate_parquet, root / "sandbox")
+        col = proposal.parameters.get("column")
+        if trusted_nullability is not None:
+            contract_nullable = trusted_nullability.get(col)
+        trial = execute_in_sandbox(
+            proposal, candidate_parquet, root / "sandbox",
+            expected_nullable=contract_nullable,
+        )
         validation = validate_sandbox(trial, clean_reference_parquet)
+
+    if validation is not None and validation.status == "FAILED":
+        review_status = "BLOCKED_VALIDATION_FAILED"
+    elif trial is not None and trial.status == "FAILED":
+        review_status = "BLOCKED_SANDBOX_FAILED"
+    elif validation is not None and not validation.passed:
+        review_status = "BLOCKED_NOT_VALIDATED"
+    else:
+        review_status = "PENDING_HUMAN_REVIEW" if detection.is_suspicious else "NO_ACTION"
 
     record = {
         "incident_id": incident_id,
@@ -58,7 +83,12 @@ def run_b0_workflow(
                      "action": proposal.action.value},
         "sandbox": asdict(trial) if trial else None,
         "validation": asdict(validation) if validation else None,
-        "review_status": "PENDING_HUMAN_REVIEW" if detection.is_suspicious else "NO_ACTION",
+        "review_status": review_status,
+        "schema_contract": (
+            {"id": schema_contract_id,
+             "target_column_nullable": contract_nullable}
+            if contract_nullable is not None else None
+        ),
         "live_data_modified": False,
         "limitations": ["Only isolated sample tested; no production deployment or Airflow integration.",
                         "End-to-end repair success and harmful-fix rates are not yet established."],
