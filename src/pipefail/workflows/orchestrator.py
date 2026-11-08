@@ -62,7 +62,16 @@ def run_b0_workflow(
             proposal, candidate_parquet, root / "sandbox",
             expected_nullable=contract_nullable,
         )
-        validation = validate_sandbox(trial, clean_reference_parquet)
+        contract_field = (
+            {"name": col, "type": proposal.parameters["target_type"],
+             "nullable": contract_nullable}
+            if contract_nullable is not None else None
+        )
+        validation = validate_sandbox(
+            trial, clean_reference_parquet,
+            expected_restored_field=contract_field,
+            schema_contract_id=schema_contract_id if contract_field else None,
+        )
 
     if validation is not None and validation.status == "FAILED":
         review_status = "BLOCKED_VALIDATION_FAILED"
