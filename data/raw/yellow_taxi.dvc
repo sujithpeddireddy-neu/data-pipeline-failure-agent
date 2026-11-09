@@ -1,0 +1,6 @@
+outs:
+- md5: abfbbc110ad6ea4f6f99fbfb44c86d5e.dir
+  size: 5450361473
+  nfiles: 94
+  hash: md5
+  path: yellow_taxi

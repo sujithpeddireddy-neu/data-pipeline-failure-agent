@@ -1,0 +1,6 @@
+outs:
+- md5: 2fc64c57d00bf7bf7a4ffb0ace83bf5b.dir
+  size: 6262
+  nfiles: 4
+  hash: md5
+  path: smoke_test

@@ -21,7 +21,14 @@ dist/
 *.egg-info/
 
 # Datasets and database files
-data/
+# DVC-managed datasets
+/data/smoke_test/
+
+# Other local data directories
+# Original TLC data managed by DVC
+/data/raw/yellow_taxi//data/processed/
+/data/experiments/
+/data/models/
 datasets/
 *.parquet
 *.csv
@@ -49,3 +56,5 @@ results/*
 .idea/
 .DS_Store
 Thumbs.db
+
+/data/benchmark_1200_v1/

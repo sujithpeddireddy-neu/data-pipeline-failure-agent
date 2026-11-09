@@ -1,0 +1,6 @@
+outs:
+- md5: 237d3d2e2712d88877d6cb6fb7f64357.dir
+  size: 624607
+  nfiles: 5
+  hash: md5
+  path: benchmark_1200_v1

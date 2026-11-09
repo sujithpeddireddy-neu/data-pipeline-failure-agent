@@ -1,0 +1,6 @@
+{
+  "null_spike_min_pp": 3.0,
+  "row_loss_min_pct": 10.0,
+  "invalid_distance_min_pp": 5.0,
+  "unexpected_row_gain_min_pct": 50.0
+}
