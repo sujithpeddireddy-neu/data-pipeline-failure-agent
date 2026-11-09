@@ -35,7 +35,7 @@ FEATURE_NAMES = (
 class RuleThresholds:
     """B0 thresholds; percentage-point fields are NOT percentages of a baseline."""
 
-    null_spike_min_pp: float = 10.0
+    null_spike_min_pp: float = 3.0
     row_loss_min_pct: float = 10.0
     invalid_distance_min_pp: float = 5.0
     unexpected_row_gain_min_pct: float = 50.0
@@ -175,3 +175,27 @@ def detect_failure(
         confidence=None,
         evidence=evaluation.reasons if evaluation.suspicious else ["No B0 rule triggered"],
     )
+
+
+def load_rule_thresholds(config_path=None) -> RuleThresholds:
+    """Load B0 thresholds from the committed configuration file."""
+    import json
+    from pathlib import Path
+
+    if config_path is None:
+        config_path = (
+            Path(__file__).resolve().parents[3]
+            / "configs"
+            / "b0_rules.json"
+        )
+
+    path = Path(config_path)
+
+    if not path.is_file():
+        raise FileNotFoundError(
+            f"B0 threshold configuration not found: {path}"
+        )
+
+    data = json.loads(path.read_text(encoding="utf-8"))
+
+    return RuleThresholds(**data)

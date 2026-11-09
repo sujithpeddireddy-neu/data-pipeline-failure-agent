@@ -9,7 +9,7 @@ from typing import Any, Mapping
 import json
 import re
 
-from pipefail.detection.rules import RuleThresholds, detect_failure
+from pipefail.detection.rules import RuleThresholds, detect_failure, load_rule_thresholds
 from pipefail.diagnosis.runbook import diagnose_failure
 from pipefail.repair.actions import propose_repair
 from pipefail.repair.sandbox import execute_in_sandbox
@@ -48,6 +48,8 @@ def run_b0_workflow(
     if record_path.exists() or record_path.is_symlink():
         raise FileExistsError(f"Existing audit record: {record_path}")
 
+    if thresholds is None:
+        thresholds = load_rule_thresholds()
     detection = detect_failure(features, incident_id, thresholds)
     diagnosis = diagnose_failure(features, incident_id, thresholds)
     proposal = propose_repair(diagnosis, raw_evidence)

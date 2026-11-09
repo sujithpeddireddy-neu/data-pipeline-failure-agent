@@ -106,6 +106,6 @@ def test_bad_flag_fails_closed():
 
 def test_thresholds_configurable():
     features = example(max_null_rate_increase_pp=5.0)
-    assert not detect_failure(features, "case").is_suspicious
+    assert not detect_failure(features, "case", RuleThresholds(null_spike_min_pp=10.0)).is_suspicious
     thresholds = RuleThresholds(null_spike_min_pp=4.0)
     assert diagnose_failure(features, "case", thresholds).failure_type == FailureType.F3

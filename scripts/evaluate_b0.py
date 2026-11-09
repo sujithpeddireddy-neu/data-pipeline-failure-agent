@@ -10,7 +10,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from pipefail.detection.rules import RuleThresholds, detect_failure
+from pipefail.detection.rules import RuleThresholds, detect_failure, load_rule_thresholds
 from pipefail.diagnosis.runbook import diagnose_failure
 from pipefail.contracts.schemas import FailureType
 
@@ -99,7 +99,7 @@ def main() -> None:
     parser.add_argument("--output", type=Path, default=Path("results/b0_rules/metrics.json"))
     args = parser.parse_args()
 
-    thresholds = RuleThresholds(**json.loads(args.config.read_text(encoding="utf-8")))
+    thresholds = load_rule_thresholds(args.config)
     if "test" in args.splits:
         print("WARNING: test split is reserved for a final locked evaluation.")
     result = {
