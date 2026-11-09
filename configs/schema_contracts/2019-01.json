@@ -1,0 +1,88 @@
+{
+  "contract_id": "tlc-yellow-2019-01-raw-training-v1",
+  "fields": {
+    "DOLocationID": {
+      "nullable": true,
+      "type": "int64"
+    },
+    "PULocationID": {
+      "nullable": true,
+      "type": "int64"
+    },
+    "RatecodeID": {
+      "nullable": true,
+      "type": "double"
+    },
+    "VendorID": {
+      "nullable": true,
+      "type": "int64"
+    },
+    "airport_fee": {
+      "nullable": true,
+      "type": "null"
+    },
+    "congestion_surcharge": {
+      "nullable": true,
+      "type": "double"
+    },
+    "extra": {
+      "nullable": true,
+      "type": "double"
+    },
+    "fare_amount": {
+      "nullable": true,
+      "type": "double"
+    },
+    "improvement_surcharge": {
+      "nullable": true,
+      "type": "double"
+    },
+    "mta_tax": {
+      "nullable": true,
+      "type": "double"
+    },
+    "passenger_count": {
+      "nullable": true,
+      "type": "double"
+    },
+    "payment_type": {
+      "nullable": true,
+      "type": "int64"
+    },
+    "store_and_fwd_flag": {
+      "nullable": true,
+      "type": "string"
+    },
+    "tip_amount": {
+      "nullable": true,
+      "type": "double"
+    },
+    "tolls_amount": {
+      "nullable": true,
+      "type": "double"
+    },
+    "total_amount": {
+      "nullable": true,
+      "type": "double"
+    },
+    "tpep_dropoff_datetime": {
+      "nullable": true,
+      "type": "timestamp[us]"
+    },
+    "tpep_pickup_datetime": {
+      "nullable": true,
+      "type": "timestamp[us]"
+    },
+    "trip_distance": {
+      "nullable": true,
+      "type": "double"
+    }
+  },
+  "month": "2019-01",
+  "provenance": "Original TLC monthly raw Parquet, captured before synthetic injection; team must verify source provenance.",
+  "schema_contract_format": 1,
+  "scope": "TRAINING_PROTOTYPE_ONLY",
+  "source_file_name": "yellow_tripdata_2019-01.parquet",
+  "source_sha256": "3ad95f39714bfc9864219e69e577f119925c6ba32d384ac68d40bdad1dc7726d",
+  "source_size_bytes": 110439634
+}
