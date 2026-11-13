@@ -1,7 +1,4 @@
-"""Audit the finished CS6170 synthetic-failure benchmark before training.
-
-Install: C:\\Capstone\\CS-6170\\scripts\\audit_experiment_dataset.py
-Run: python scripts/audit_experiment_dataset.py --data-dir C:\\Capstone\\datasets
+"""Audit the finished synthetic-failure benchmark before training.
 
 Read-only; no parquet files or benchmark artifacts are modified.
 """
