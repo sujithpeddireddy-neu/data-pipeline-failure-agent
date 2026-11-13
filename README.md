@@ -2,7 +2,7 @@
 
 **CS6170 AI Capstone · Northeastern University**
 
-PipeFail is a data-pipeline failure detection, diagnosis, and repair-recommendation system. It converts pipeline evidence into structured incident features, identifies supported failure types, and routes proposed repairs through validation and human review. The current implementation provides a deterministic rule-based baseline (B0), a LightGBM diagnosis comparison, and an isolated repair demonstration. Full production orchestration and foundation-model-assisted repair are not part of the reproducible baseline.
+PipeFail is a data-pipeline failure detection, diagnosis, and repair-recommendation system. It converts pipeline evidence into structured incident features, identifies supported failure types, and routes proposed repairs through validation and human review. The current implementation includes a deterministic rule-based baseline (B0), LightGBM-based failure diagnosis, rulebook-based repair recommendations, and sandbox validation for supported repairs. Human approval is required before production changes. Full production orchestration and foundation-model-assisted repair are not part of the reproducible baseline.
 
 **Team:** Sujith Peddireddy · Dhruv Dolas · Pratyush Tyagi
 
@@ -239,6 +239,24 @@ The smoke fixture's `manifest.json` records the source dataset, sampling method,
 **LightGBM diagnosis.** `scripts/train_lightgbm_baseline.py` loads 16 structured features and trains a multiclass classifier for CLEAN and F1–F6, using validation-based early stopping. It records model configuration, seed, dataset hashes, and feature-vector overlap.
 
 **Sandbox repair and review.** `scripts/demo_b0_workflow.py` demonstrates an F2 type-conversion proposal validated on isolated Parquet data and an F3 manual-review path. `src/pipefail/repair/` contains proposal execution and validation logic; `src/pipefail/review/` records human decisions. A sandbox pass does **not** authorize deployment to live data.
+
+### LightGBM Repair Recommendations
+
+PipeFail connects LightGBM failure diagnosis to the existing
+rule-based repair recommendation system.
+
+The workflow is:
+
+Pipeline Evidence → LightGBM Diagnosis → Repair Runbook →
+Repair Proposal → Sandbox Validation → Human Review
+
+LightGBM predicts CLEAN or F1–F6. The runbook then recommends
+an appropriate action.
+
+To evaluate repair recommendations on the full benchmark:
+
+```bash
+python scripts/evaluate_lightgbm_repairs.py --data-dir data/benchmark_1200_v1 --split test --model-dir results/walkthrough_v1/lightgbm --output-dir results/walkthrough_v1/lightgbm/repair_recommendations
 
 ## Recorded smoke-test results
 
