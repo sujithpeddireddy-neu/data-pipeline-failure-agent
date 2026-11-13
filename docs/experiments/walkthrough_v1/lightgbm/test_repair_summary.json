@@ -1,0 +1,41 @@
+{
+  "split": "test",
+  "n_incidents": 400,
+  "diagnosis_correct": 400,
+  "diagnosis_accuracy": 1.0,
+  "predicted_labels": {
+    "F3": 50,
+    "CLEAN": 100,
+    "F4": 50,
+    "F2": 50,
+    "F6": 50,
+    "F5": 50,
+    "F1": 50
+  },
+  "runbook_actions": {
+    "MANUAL_REVIEW": 250,
+    "RERUN_MONTH": 50,
+    "PAUSE_DOWNSTREAM": 100
+  },
+  "proposal_statuses": {
+    "REVIEW_REQUIRED": 300,
+    "NO_ACTION": 100
+  },
+  "git_commit": "fc47e8c41c7446fdb402b328f42e78939da8e564",
+  "model_training_commit": "fc47e8c41c7446fdb402b328f42e78939da8e564",
+  "model_sha256": "34b5fca184330ff2909599135b1544710552ae01ffbfb501d67d13dbac619ad2",
+  "model_manifest_sha256": "c712e6a3660effc6600ebf7d074dae074b37fd94455459695ea534501a4c9ad3",
+  "dataset_csv_sha256": "59b29e1eb312beaca929262578eff8b7e55fd8fbf14d1d14d1897a3b052182b7",
+  "min_confidence_uncalibrated": 0.0,
+  "live_data_modified": false,
+  "sandbox_repair_trials": 0,
+  "successful_repairs": "NOT_EVALUATED",
+  "harmful_repairs": "NOT_EVALUATED",
+  "limitations": [
+    "This output is diagnosis plus a *proposal*, not successful repair execution.",
+    "Numeric evidence alone cannot identify a safely repairable affected column.",
+    "F2 type conversion requires full trusted schema evidence and a separate sandbox trial.",
+    "The LightGBM score is uncalibrated and does not establish repair safety.",
+    "The benchmark contains synthetic failures and repeated feature vectors across splits."
+  ]
+}

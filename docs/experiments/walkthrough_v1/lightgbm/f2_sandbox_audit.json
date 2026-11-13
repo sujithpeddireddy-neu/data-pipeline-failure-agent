@@ -1,0 +1,58 @@
+{
+    "incident_id":  "lightgbm-f2-sample",
+    "architecture":  "LIGHTGBM_RUNBOOK",
+    "diagnosis":  {
+                      "incident_id":  "lightgbm-f2-sample",
+                      "model_name":  "LIGHTGBM_RUNBOOK",
+                      "failure_type":  "F2",
+                      "affected_step":  null,
+                      "affected_column":  null,
+                      "recommended_action":  "MANUAL_REVIEW",
+                      "evidence":  [
+                                       "LightGBM predicted F2 from 16 evidence features",
+                                       "This prediction score is not calibrated"
+                                   ],
+                      "confidence":  0.9999913161875815,
+                      "uncertainty":  "Rulebook mapping is a suggestion; human review required"
+                  },
+    "proposal":  {
+                     "incident_id":  "lightgbm-f2-sample",
+                     "failure_type":  "F2",
+                     "action":  "CONVERT_TYPE",
+                     "status":  "SANDBOX_ELIGIBLE",
+                     "rationale":  [
+                                       "Trial restore total_amount from string to double in sandbox only.",
+                                       "Pass/fail requires exact comparison against the clean reference.",
+                                       "Human approval is mandatory; approval does not deploy changes."
+                                   ],
+                     "parameters":  {
+                                        "column":  "total_amount",
+                                        "source_type":  "string",
+                                        "target_type":  "double"
+                                    },
+                     "human_approval_required":  true
+                 },
+    "sandbox":  {
+                    "incident_id":  "lightgbm-f2-sample",
+                    "status":  "SUCCEEDED",
+                    "output_path":  "results/walkthrough_v1/lightgbm/f2_workflow_demo/run_u9km_43d/sandbox/lightgbm-f2-sample_trial.parquet",
+                    "message":  "Sandbox trial written; 3 rows. NOT approved."
+                },
+    "validation":  {
+                       "incident_id":  "lightgbm-f2-sample",
+                       "status":  "PASSED",
+                       "passed":  true,
+                       "evidence":  [
+                                        "Matched clean reference for all 3 rows and 2 columns.",
+                                        "Only this isolated sample was validated; production release is prohibited."
+                                    ]
+                   },
+    "review_status":  "PENDING_HUMAN_REVIEW",
+    "schema_contract":  null,
+    "live_data_modified":  false,
+    "limitations":  [
+                        "Only one isolated incident assessed; no production deployment or automatic approval.",
+                        "Classification confidence is uncalibrated.",
+                        "A sandbox validation pass on a small sample is not production-wide repair safety."
+                    ]
+}

@@ -1,0 +1,123 @@
+{
+  "config": "configs\\b0_rules.json",
+  "thresholds": {
+    "null_spike_min_pp": 3.0,
+    "row_loss_min_pct": 10.0,
+    "invalid_distance_min_pp": 5.0,
+    "unexpected_row_gain_min_pct": 50.0
+  },
+  "dataset": "data\\benchmark_1200_v1",
+  "splits": [
+    {
+      "split": "train",
+      "rows": 600,
+      "detection": {
+        "tp": 429,
+        "fp": 0,
+        "fn": 21,
+        "tn": 150,
+        "precision": 1.0,
+        "recall": 0.953333,
+        "f1": 0.976109
+      },
+      "diagnosis": {
+        "accuracy": 0.965,
+        "unknown_count": 0,
+        "per_class_recall": {
+          "CLEAN": 1.0,
+          "F1": 1.0,
+          "F2": 1.0,
+          "F3": 1.0,
+          "F4": 0.933333,
+          "F5": 0.786667,
+          "F6": 1.0
+        },
+        "predicted_counts": {
+          "CLEAN": 171,
+          "F1": 75,
+          "F2": 75,
+          "F3": 75,
+          "F4": 70,
+          "F5": 59,
+          "F6": 75
+        }
+      }
+    },
+    {
+      "split": "val",
+      "rows": 200,
+      "detection": {
+        "tp": 142,
+        "fp": 0,
+        "fn": 8,
+        "tn": 50,
+        "precision": 1.0,
+        "recall": 0.946667,
+        "f1": 0.972603
+      },
+      "diagnosis": {
+        "accuracy": 0.96,
+        "unknown_count": 0,
+        "per_class_recall": {
+          "CLEAN": 1.0,
+          "F1": 1.0,
+          "F2": 1.0,
+          "F3": 1.0,
+          "F4": 1.0,
+          "F5": 0.68,
+          "F6": 1.0
+        },
+        "predicted_counts": {
+          "CLEAN": 58,
+          "F1": 25,
+          "F2": 25,
+          "F3": 25,
+          "F4": 25,
+          "F5": 17,
+          "F6": 25
+        }
+      }
+    },
+    {
+      "split": "test",
+      "rows": 400,
+      "detection": {
+        "tp": 279,
+        "fp": 0,
+        "fn": 21,
+        "tn": 100,
+        "precision": 1.0,
+        "recall": 0.93,
+        "f1": 0.963731
+      },
+      "diagnosis": {
+        "accuracy": 0.9475,
+        "unknown_count": 0,
+        "per_class_recall": {
+          "CLEAN": 1.0,
+          "F1": 1.0,
+          "F2": 1.0,
+          "F3": 1.0,
+          "F4": 0.8,
+          "F5": 0.78,
+          "F6": 1.0
+        },
+        "predicted_counts": {
+          "CLEAN": 121,
+          "F1": 50,
+          "F2": 50,
+          "F3": 50,
+          "F4": 40,
+          "F5": 39,
+          "F6": 50
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Evidence features are computed against a clean reference in the synthetic benchmark.",
+    "Added columns alone are allowed; contract-dependent breaking changes need context.",
+    "No repair execution or sandbox validation is performed by this script.",
+    "Confidence is not calibrated for deterministic rules."
+  ]
+}

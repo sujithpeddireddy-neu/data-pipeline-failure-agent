@@ -1,0 +1,17 @@
+feature,gain_importance
+missing_column_count,3869.3301641795056
+row_count_change_pct,3862.8171171322274
+invalid_distance_increase_pp,3859.0569780414753
+type_change_count,3782.6869367206746
+max_null_rate_increase_pp,3695.5927460122757
+arrival_available,1371.6848392943461
+file_missing,1101.0824038442142
+schema_comparison_available,747.5290337220454
+late_arrival_minutes,670.8192311525346
+revenue_probe_failed,518.648245895666
+invalid_rate_available,96.45730638324
+max_null_rate_decrease_pp,20.437834499665694
+distance_probe_failed,13.246680425492483
+added_column_count,0.0
+row_count_available,0.0
+late_arrival_flag,0.0
