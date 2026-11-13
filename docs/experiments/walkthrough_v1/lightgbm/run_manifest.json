@@ -1,0 +1,113 @@
+{
+  "git_commit": "fc47e8c41c7446fdb402b328f42e78939da8e564",
+  "git_worktree_changes": true,
+  "training_script_sha256": "0504065b846011f43c4d2ca5d0f133ae65e03d497e0e0671ceb4d0bf33adafe0",
+  "data_directory": "C:\\Capstone\\CS-6170\\data\\benchmark_1200_v1",
+  "dataset_dvc_file": "data\\benchmark_1200_v1.dvc",
+  "dataset_dvc_metadata_sha256": "b14a2260ee6eebb2c97c7fb25352667e5b20e77b2bfe7b7606959a514dc9a582",
+  "csv_sha256": {
+    "train": "870a13e7ec43b6290176c506fd8e8caa126cb32960a47087273a672c79d9d125",
+    "val": "afe36f214eab9b428e93aa447a5684295f4dc1275af491ebb16f287ed9d0bbc4",
+    "test": "59b29e1eb312beaca929262578eff8b7e55fd8fbf14d1d14d1897a3b052182b7"
+  },
+  "seed": 6170,
+  "features": [
+    "file_missing",
+    "schema_comparison_available",
+    "missing_column_count",
+    "added_column_count",
+    "type_change_count",
+    "row_count_available",
+    "row_count_change_pct",
+    "max_null_rate_increase_pp",
+    "max_null_rate_decrease_pp",
+    "invalid_rate_available",
+    "invalid_distance_increase_pp",
+    "distance_probe_failed",
+    "revenue_probe_failed",
+    "arrival_available",
+    "late_arrival_minutes",
+    "late_arrival_flag"
+  ],
+  "label_order": [
+    "CLEAN",
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "split_sizes": {
+    "train": 600,
+    "val": 200,
+    "test": 400
+  },
+  "class_counts": {
+    "train": {
+      "CLEAN": 150,
+      "F1": 75,
+      "F2": 75,
+      "F3": 75,
+      "F4": 75,
+      "F5": 75,
+      "F6": 75
+    },
+    "val": {
+      "CLEAN": 50,
+      "F1": 25,
+      "F2": 25,
+      "F3": 25,
+      "F4": 25,
+      "F5": 25,
+      "F6": 25
+    },
+    "test": {
+      "CLEAN": 100,
+      "F1": 50,
+      "F2": 50,
+      "F3": 50,
+      "F4": 50,
+      "F5": 50,
+      "F6": 50
+    }
+  },
+  "parameters": {
+    "objective": "multiclass",
+    "n_estimators": 350,
+    "learning_rate": 0.05,
+    "num_leaves": 15,
+    "max_depth": 6,
+    "min_child_samples": 5,
+    "random_state": 6170,
+    "n_jobs": 1,
+    "verbosity": -1,
+    "importance_type": "gain",
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "best_iteration": 149,
+  "python": "3.13.14",
+  "lightgbm": "4.7.0",
+  "pandas": "3.1.0",
+  "scikit_learn": "1.9.1",
+  "numpy": "2.5.4",
+  "unique_train_feature_vectors": 216,
+  "val_feature_overlap": {
+    "shared_unique_feature_vectors_with_train": 28,
+    "rows_with_feature_vector_seen_in_train": 142,
+    "total_rows": 200
+  },
+  "test_feature_overlap": {
+    "shared_unique_feature_vectors_with_train": 39,
+    "rows_with_feature_vector_seen_in_train": 275,
+    "total_rows": 400
+  },
+  "notes": [
+    "Baseline uses 16 evidence features; target label is never included in X.",
+    "Training/validation/test split is predetermined by the source benchmark.",
+    "Validation used only for early stopping; test used only for evaluation.",
+    "Synthetic failure signatures and repeated feature vectors may inflate measured performance.",
+    "Smoke-test metrics are not representative generalization estimates."
+  ]
+}

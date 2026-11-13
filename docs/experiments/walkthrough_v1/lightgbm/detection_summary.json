@@ -1,0 +1,15 @@
+{
+  "source": "docs/experiments/walkthrough_v1/lightgbm/test_predictions.csv",
+  "n_incidents": 400,
+  "binary_decision": "predicted_label != CLEAN",
+  "classification_type": "derived binary detection from learned multiclass LightGBM diagnosis",
+  "counts": {
+    "tp": 300,
+    "fp": 0,
+    "fn": 0,
+    "tn": 100
+  },
+  "precision": 1.0,
+  "recall": 1.0,
+  "warning": "Detection is derived from multiclass outputs; not a separately trained detector."
+}

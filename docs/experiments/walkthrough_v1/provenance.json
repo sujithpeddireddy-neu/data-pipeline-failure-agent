@@ -1,0 +1,19 @@
+﻿{
+    "export_created_utc":  "2026-11-13T01:41:53.5607542Z",
+    "repository_revision_at_export":  "427e79aaeb6159a2f937f0959f5f88ded5fe02f3",
+    "repository_branch_at_export":  "feature/lightgbm-repair",
+    "worktree_has_changes_at_export":  true,
+    "trained_model_revision":  "See lightgbm/run_manifest.json (git_commit)",
+    "original_runs":  "B0 / LightGBM results from results/walkthrough_v1; repair results may have been generated under a later code revision.",
+    "dataset_versioning":  "DVC: data/benchmark_1200_v1.dvc",
+    "sha256_inputs":  {
+                          "data/benchmark_1200_v1/train.csv":  "870a13e7ec43b6290176c506fd8e8caa126cb32960a47087273a672c79d9d125",
+                          "data/benchmark_1200_v1/val.csv":  "afe36f214eab9b428e93aa447a5684295f4dc1275af491ebb16f287ed9d0bbc4",
+                          "data/benchmark_1200_v1/test.csv":  "59b29e1eb312beaca929262578eff8b7e55fd8fbf14d1d14d1897a3b052182b7",
+                          "data/benchmark_1200_v1.dvc":  "b14a2260ee6eebb2c97c7fb25352667e5b20e77b2bfe7b7606959a514dc9a582",
+                          "configs/b0_rules.json":  "3e0a29ac065eab2b9ca55e0ca7e9ab81520880ec42d2120e9102a1da3db79543",
+                          "scripts/train_lightgbm_baseline.py":  "0504065b846011f43c4d2ca5d0f133ae65e03d497e0e0671ceb4d0bf33adafe0",
+                          "scripts/evaluate_b0.py":  "4bd273391abd3b74e91335fe200a8773ce552be92a3a039bcef691d28b5f543a",
+                          "scripts/evaluate_lightgbm_repairs.py":  "d9c3d62327fba4dfca0fb4f6d929d8876f19b8718baeb396e3486d1b74bdb2c5"
+                      }
+}

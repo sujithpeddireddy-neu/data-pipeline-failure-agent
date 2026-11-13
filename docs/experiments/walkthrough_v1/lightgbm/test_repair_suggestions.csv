@@ -1,0 +1,401 @@
+incident_id,true_label,predicted_label,diagnosis_correct,score_uncalibrated,runbook_action,proposed_action,proposal_status,human_approval_required,rationale
+test-0001,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0002,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0003,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0004,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0005,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0006,F4,F4,True,0.99999494,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0007,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0008,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0009,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0010,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0011,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0012,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0013,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0014,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0015,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0016,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0017,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0018,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0019,F4,F4,True,0.99999485,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0020,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0021,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0022,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0023,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0024,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0025,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0026,F4,F4,True,0.99978791,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0027,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0028,F3,F3,True,0.99997451,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0029,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0030,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0031,F4,F4,True,0.99998472,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0032,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0033,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0034,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0035,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0036,F3,F3,True,0.99998915,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0037,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0038,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0039,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0040,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0041,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0042,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0043,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0044,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0045,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0046,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0047,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0048,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0049,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0050,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0051,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0052,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0053,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0054,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0055,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0056,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0057,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0058,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0059,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0060,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0061,F4,F4,True,0.99999441,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0062,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0063,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0064,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0065,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0066,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0067,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0068,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0069,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0070,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0071,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0072,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0073,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0074,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0075,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0076,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0077,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0078,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0079,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0080,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0081,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0082,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0083,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0084,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0085,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0086,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0087,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0088,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0089,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0090,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0091,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0092,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0093,F4,F4,True,0.99999585,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0094,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0095,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0096,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0097,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0098,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0099,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0100,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0101,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0102,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0103,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0104,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0105,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0106,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0107,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0108,F4,F4,True,0.99999484,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0109,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0110,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0111,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0112,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0113,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0114,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0115,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0116,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0117,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0118,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0119,F4,F4,True,0.99999441,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0120,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0121,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0122,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0123,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0124,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0125,F3,F3,True,0.99997451,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0126,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0127,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0128,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0129,F4,F4,True,0.99999441,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0130,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0131,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0132,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0133,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0134,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0135,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0136,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0137,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0138,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0139,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0140,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0141,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0142,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0143,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0144,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0145,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0146,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0147,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0148,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0149,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0150,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0151,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0152,F3,F3,True,0.99997451,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0153,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0154,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0155,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0156,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0157,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0158,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0159,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0160,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0161,F4,F4,True,0.99999441,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0162,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0163,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0164,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0165,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0166,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0167,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0168,F4,F4,True,0.99978202,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0169,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0170,F4,F4,True,0.99999481,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0171,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0172,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0173,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0174,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0175,F4,F4,True,0.99999485,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0176,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0177,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0178,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0179,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0180,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0181,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0182,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0183,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0184,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0185,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0186,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0187,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0188,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0189,F4,F4,True,0.99999485,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0190,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0191,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0192,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0193,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0194,F4,F4,True,0.99999586,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0195,F3,F3,True,0.9999893,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0196,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0197,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0198,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0199,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0200,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0201,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0202,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0203,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0204,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0205,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0206,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0207,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0208,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0209,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0210,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0211,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0212,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0213,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0214,F4,F4,True,0.99998592,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0215,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0216,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0217,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0218,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0219,F3,F3,True,0.9999893,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0220,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0221,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0222,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0223,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0224,F4,F4,True,0.99999509,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0225,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0226,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0227,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0228,F4,F4,True,0.99978202,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0229,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0230,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0231,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0232,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0233,F3,F3,True,0.9999893,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0234,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0235,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0236,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0237,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0238,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0239,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0240,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0241,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0242,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0243,F4,F4,True,0.99999494,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0244,F4,F4,True,0.99999392,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0245,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0246,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0247,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0248,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0249,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0250,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0251,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0252,F4,F4,True,0.99999585,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0253,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0254,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0255,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0256,F4,F4,True,0.99998472,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0257,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0258,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0259,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0260,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0261,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0262,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0263,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0264,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0265,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0266,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0267,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0268,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0269,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0270,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0271,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0272,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0273,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0274,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0275,F4,F4,True,0.99978791,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0276,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0277,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0278,F3,F3,True,0.99989102,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0279,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0280,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0281,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0282,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0283,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0284,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0285,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0286,F3,F3,True,0.99997451,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0287,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0288,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0289,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0290,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0291,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0292,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0293,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0294,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0295,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0296,F4,F4,True,0.99999392,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0297,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0298,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0299,F4,F4,True,0.99999509,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0300,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0301,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0302,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0303,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0304,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0305,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0306,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0307,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0308,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0309,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0310,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0311,F3,F3,True,0.99998995,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0312,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0313,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0314,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0315,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0316,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0317,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0318,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0319,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0320,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0321,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0322,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0323,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0324,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0325,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0326,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0327,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0328,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0329,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0330,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0331,F6,F6,True,0.99998224,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0332,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0333,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0334,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0335,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0336,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0337,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0338,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0339,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0340,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0341,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0342,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0343,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0344,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0345,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0346,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0347,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0348,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0349,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0350,F4,F4,True,0.99978791,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0351,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0352,F4,F4,True,0.99999585,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0353,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0354,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0355,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0356,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0357,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0358,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0359,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0360,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0361,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0362,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0363,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0364,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0365,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0366,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0367,F2,F2,True,0.99999132,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0368,F2,F2,True,0.99999142,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0369,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0370,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0371,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0372,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0373,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0374,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0375,F4,F4,True,0.99978201,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0376,F4,F4,True,0.99998591,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0377,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0378,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0379,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0380,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0381,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0382,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0383,F4,F4,True,0.99978202,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0384,F4,F4,True,0.99999484,RERUN_MONTH,RERUN_MONTH,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0385,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0386,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0387,F1,F1,True,0.99999272,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0388,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0389,F3,F3,True,0.99999053,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0390,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0391,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0392,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0393,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0394,F1,F1,True,0.99998318,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0395,F2,F2,True,0.99998064,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,F2 type restoration requires detailed raw evidence.
+test-0396,F1,F1,True,0.99999007,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0397,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0398,F5,F5,True,0.999989,MANUAL_REVIEW,MANUAL_REVIEW,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
+test-0399,CLEAN,CLEAN,True,0.9999759,MANUAL_REVIEW,MANUAL_REVIEW,NO_ACTION,True,Run assessed as clean; no repair needed.
+test-0400,F6,F6,True,0.99997863,PAUSE_DOWNSTREAM,PAUSE_DOWNSTREAM,REVIEW_REQUIRED,True,No verified automatic data-changing repair for this failure class. | Human operator must investigate or take the runbook's operational action.
