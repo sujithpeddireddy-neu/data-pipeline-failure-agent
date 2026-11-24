@@ -6,7 +6,7 @@
 **Date:** November 24, 2026  
 **Repository:** `sujithpeddireddy-neu/data-pipeline-failure-agent`  
 **Integration branch:** `feature/week11-results`  
-**Reference commit:** `9741853` (last verified local integration commit; current revision to be recorded at rehearsal)
+**Reference commit at the local B0 fallback verification:** `f73a49c3c2f79ae779cef1bcf0fca84c47587ea7` (release-plan commit on `feature/week11-results`; later documentation revisions will have different commit IDs)
 
 ## Release Decision and Scope
 
@@ -137,19 +137,30 @@ Implementation checks include **71/71 passing unit tests**, successful LightGBM�
 5. **Confirm safety and compatibility.** Maintain human approval and sandbox restrictions. Verify that no live dataset was modified. In any future blue/green batch deployment, restore the previously validated batch output along with its compatible preprocessing and configuration.
 6. **Record and review the event.** Document elapsed time, manual step count, results, observed problems, artifact locations, and operator/reviewer approvals. A failed rehearsal blocks promotion until the cause is resolved.
 
-### Rollback Rehearsal Record
+### Local B0 Fallback Verification — November 24, 2026
 
-| Required field | Status |
+A timed **local verification of the B0 fallback evaluation path** was performed against the previously used 400-case benchmark. The B0 evaluation script exited successfully and reproduced the known baseline metrics. This is evidence of B0 availability and reproducibility, **not evidence of a completed B1/B2-to-B0 live serving switch**: no active candidate router was switched, and the verification script does not execute repairs or validate sandbox safety.
+
+| Recorded field | Observed value |
 |---|---|
-| Rehearsal date and time | **Pending execution** |
-| Operator and independent reviewer | **To be recorded** |
-| Starting commit, dataset, model, and configuration versions | **To be recorded** |
-| Known input and expected baseline output | **To be recorded** |
-| Start/end timestamps and elapsed duration | **Not yet measured** |
-| Number of manual rollback steps | **Not yet measured** |
-| Verification result and audit artifact | **Pending** |
+| Date and recorded start time | **2026-11-24, 12:54:54** (local PowerShell clock) |
+| Elapsed execution time | **0.412 seconds**, measured by `System.Diagnostics.Stopwatch`; includes B0 command execution and PowerShell overhead before stopping the timer |
+| Starting branch / commit | `feature/week11-results` / `f73a49c3c2f79ae779cef1bcf0fca84c47587ea7` |
+| Baseline being verified | B0 rulebook using `scripts/evaluate_b0.py` and `configs/b0_rules.json` |
+| Input and cases | `data/benchmark_1200_v1/test.csv`; **400** records |
+| Input SHA-256 | `59B29E1EB312BEACA929262578EFF8B7E55FD8FBF14D1D14D1897A3B052182B7` |
+| B0 config SHA-256 | `3E0A29AC065EAB2B9CA55E0CA7E9AB81520880EC42D2120E9102A1DA3DB79543` |
+| Starting B1 model version / B2 provider version | **Not captured**; no candidate was actively serving during this test |
+| Manual steps | **Not formally counted**; one B0 evaluation command was executed after manual evidence-directory setup and state capture |
+| Independent reviewer | **Not recorded; independent verification outstanding** |
+| Exit code | **0 (success)** |
+| Output artifact on the testing machine | `results/release_rollback_20261124_125454/b0_metrics.json` (local `results/` folder is Git-ignored) |
+| Known baseline diagnosis | **379/400 (94.75%)**, reproduced |
+| Known detection precision / recall | **100% / 93%**, reproduced |
+| Per-class results | `CLEAN`, F1, F2, F3 and F6: **100%**; F4: **80%**; F5: **78%**, reproduced |
+| Deferrals / repair execution | **0** deferrals; **no repair execution or sandbox validation performed** by this command |
 
-**Rehearsal status:** Not yet documented as completed. A timed rollback, including known-input verification, is required before the plan can be considered operationally validated.
+**Assessment:** **PASS — B0 local fallback-path verification. PARTIAL — full rollback rehearsal.** The remaining release-readiness evidence is a documented switch from an explicitly running B1/B2 candidate to B0 or AI-off, with the complete manual step count, starting model/configuration version, independent reviewer verification and confirmation that the repair execution path remains disabled. No production routing mechanism is claimed.
 
 ## 5. Operator Communication and Correction
 
@@ -181,7 +192,7 @@ These requirements govern release readiness; implementation of every operator-fa
 
 **Outstanding release prerequisites:**
 
-1. Complete and document a timed B0 rollback rehearsal with independent verification.
+1. Complete the candidate-to-B0/AI-off switch rehearsal with an explicit starting model version, manual-step count, and independent review. The timed local B0-path verification performed on November 24, 2026 is recorded in Section 4.
 2. Verify the exact Gemini API model/version and re-evaluate the updated prompt.
 3. Evaluate B2 on a larger, appropriately controlled benchmark and complete the B2 F2 sandbox repair assessment.
 4. Conduct fresh per-class and repair-safety evaluation with documented sample counts.
