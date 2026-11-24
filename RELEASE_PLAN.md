@@ -160,7 +160,33 @@ A timed **local verification of the B0 fallback evaluation path** was performed 
 | Per-class results | `CLEAN`, F1, F2, F3 and F6: **100%**; F4: **80%**; F5: **78%**, reproduced |
 | Deferrals / repair execution | **0** deferrals; **no repair execution or sandbox validation performed** by this command |
 
-**Assessment:** **PASS — B0 local fallback-path verification. PARTIAL — full rollback rehearsal.** The remaining release-readiness evidence is a documented switch from an explicitly running B1/B2 candidate to B0 or AI-off, with the complete manual step count, starting model/configuration version, independent reviewer verification and confirmation that the repair execution path remains disabled. No production routing mechanism is claimed.
+**Assessment of this first test:** **PASS — B0 local fallback-path verification. PARTIAL — complete rollback rehearsal.** This initial test did not run a candidate before B0. A subsequent B1-then-B0 local workflow rehearsal is documented below. Neither test establishes an operational serving-router rollback, which would require the complete manual step count, starting model/configuration version, independent reviewer verification, and confirmation that repair execution remains disabled.
+
+### B1-to-B0 Local Workflow-Switching Rehearsal — November 24, 2026
+
+A second rehearsal ran the B1 LightGBM repair-proposal evaluation against the previously inspected benchmark and then manually invoked the B0 baseline evaluation against the same 400 test incidents. Both commands completed successfully. B0 reproduced the previously recorded reference metrics after the B1 command. **This confirms a local sequential workflow fallback, not an automatic or live serving-router rollback.**
+
+| Recorded field | Observed value |
+|---|---|
+| Date and B0 switch start | **2026-11-24, 13:04:29** (local PowerShell clock) |
+| Starting branch / commit | `feature/week11-results` / `c780d9a17e50f563291b66d848dff2fabb020456` |
+| Candidate path | B1 LightGBM with constrained runbook; `scripts/evaluate_lightgbm_repairs.py` |
+| Candidate model directory | `results/walkthrough_v1/lightgbm` (`model.txt` confirmed present; model hash not captured) |
+| Candidate result | **400/400** correct diagnoses; **300** `REVIEW_REQUIRED`, **100** `NO_ACTION` |
+| Candidate runbook actions | **250** `MANUAL_REVIEW`, **50** `RERUN_MONTH`, **100** `PAUSE_DOWNSTREAM` |
+| Candidate command exit code | **0** |
+| Fallback path | B0 rulebook via `scripts/evaluate_b0.py`, configuration `configs/b0_rules.json` |
+| B0 execution time | **0.249 seconds**, measured by `System.Diagnostics.Stopwatch` around the B0 command, not a measured end-to-end traffic cutover |
+| Fallback command exit code | **0** |
+| B0 verification | **400** cases; **379/400 (94.75%)** diagnoses correct; **100%** detection precision; **93%** detection recall |
+| B0 outcome | **PASS** — expected baseline result reproduced after B1 evaluation |
+| Manual procedure | Two principal workflow invocations (B1 evaluation, then B0 evaluation); directory setup, inspection and verification were also performed manually. **Total manual step count not formally logged.** |
+| Candidate output evidence | `results/switch_rehearsal_20261124_130353/b1/test_repair_suggestions.csv` and `test_repair_summary.json` |
+| B0 output evidence | `results/switch_rehearsal_20261124_130353/b0_metrics.json` |
+| Source file changes / repair execution | B1 evaluator reported **no source-file changes, repair execution, or approval**; B0 evaluator performs no repairs |
+| Independent reviewer | **Not recorded; independent review outstanding** |
+
+**Assessment:** **PASS — local B1-to-B0 sequential workflow rehearsal. NOT VERIFIED — live or automatic serving rollback.** The rehearsal demonstrates that the candidate and baseline can run in sequence against the same stored incident set, that B0 retains its expected behavior, and that no repair execution was performed by these evaluation commands. It does not demonstrate an application-level routing switch, rollback of changed upstream data or thresholds, or independently verified recovery. The reserved test set was reused solely for reproducibility checking.
 
 ## 5. Operator Communication and Correction
 
@@ -188,11 +214,13 @@ These requirements govern release readiness; implementation of every operator-fa
 - `docs/b2_results/metrics.json` and `docs/b2_results/README.md` — preliminary B2 validation and operational results.
 - `docs/b2_results/f2_mock_summary.json` — mocked F2 verification; not a production repair success measurement.
 - `data/benchmark_1200_v1.dvc` — versioned benchmark data pointer.
+- `docs/release/b0_fallback_20261124_125454.json` — committed evidence of the first B0 fallback-path verification.
+- `results/switch_rehearsal_20261124_130353/` — second rehearsal outputs; locally stored under Git-ignored `results/` until copied into a tracked evidence location.
 - CS6170 Week 10, *Deployment Strategies*, slides 8–20 — serving patterns, rollout strategies, promotion gates, rollback, and operator notification requirements.
 
 **Outstanding release prerequisites:**
 
-1. Complete the candidate-to-B0/AI-off switch rehearsal with an explicit starting model version, manual-step count, and independent review. The timed local B0-path verification performed on November 24, 2026 is recorded in Section 4.
+1. The local B1-to-B0 sequential workflow rehearsal completed on November 24, 2026 and is documented in Section 4. A true serving-router rollback, complete manual-step count, candidate model hash, and independent reviewer verification remain outstanding before any operational release.
 2. Verify the exact Gemini API model/version and re-evaluate the updated prompt.
 3. Evaluate B2 on a larger, appropriately controlled benchmark and complete the B2 F2 sandbox repair assessment.
 4. Conduct fresh per-class and repair-safety evaluation with documented sample counts.
