@@ -113,6 +113,23 @@ Implementation checks include **71/71 passing unit tests**, successful LightGBM�
 
 **Promotion disposition:** B0 remains the controlled reference and fallback. B1 remains eligible for further offline and supervised evaluation once the inconsistent accuracy gate is formally resolved and repair-safety evidence is sufficient. B2 remains experimental pending broader evaluation, API version verification, lower failure rates, and completed safety testing. **Autonomous production repair is not authorized for any architecture.**
 
+### 3.5 Week 11 Supplemental Evidence (November 24, 2026)
+
+The following evidence supplements the evaluation in Sections 3.1–3.4. It does **not** supersede the predeclared Week 7 release gates or establish live production readiness.
+
+| Evaluation | Observed result | Evidence and interpretation |
+|---|---|---|
+| B1 seeded reproducibility | Seeds **6170, 6171, 6172** each obtained **400/400 (100%)** test accuracy; **mean 100% ± 0 percentage-point SD (3 seeds)** | `results/week11/lightgbm_seed_{6170,6171,6172}/metrics.json` and matching `run_manifest.json` files (local, Git-ignored evidence). The historical test was reused; seed runs are not independent new holdout evaluations. |
+| Per-architecture local diagnosis latency | B0 p95 **0.0062 ms**; B1 p95 **0.6263 / 0.7260 / 0.8727 ms** for the three seeds | `results/week11/latency/diagnosis_latency.json` (local, Git-ignored evidence). Each estimate comprises 1,200 timed calls (400 incidents × 3 repetitions) on one Windows machine; excludes repair execution and workflow network latency. |
+| Storyboard B candidate slice | **18** test F3 cases have a single-column `RatecodeID` null spike with pre-existing nulls. B1 diagnosis **18/18 correct**; **18/18 manual-review deferrals (100%)**; **0/18 data-changing proposals**; no sandbox repair executed | `results/week11/storyboard_b/summary.json` and `storyboard_b_cases.csv` (local, Git-ignored evidence). Proxy slice is smaller than the original ≥40-case target; injection-template diversity and clean-run borough shifts are not verified. The observed deferral rate exceeds the original 30% ceiling by **70 percentage points**. |
+| Harmful-repair counterfactuals | For `batch60-test-0001`, deleting all NULL `RatecodeID` rows would remove **472/1000**, including **172 pre-existing NULL** rows. For `batch60-test-0015`, it would remove **415/1000**, including **251 pre-existing NULL** rows | `results/week11/error_cases/unsafe_quarantine_counterfactual.json` (local, Git-ignored evidence). These are **hypothetical unsafe actions**, not actions proposed or executed by PipeFail; B1 actually deferred both cases. They cannot support a numeric measured harmful-fix rate. |
+| Observed B0 diagnosis errors | **21/400** incorrect labels, exclusively F4/F5. Example `batch60-test-0031`: true **F4**, B0 **CLEAN** at −6.7% row-count change (below its 10% threshold) | `results/week11/error_cases/b0_misdiagnoses.json` (local, Git-ignored evidence). These are genuine observed false negatives in the synthetic test. |
+| B2 operational latency | Recorded mean **37.319 seconds**, maximum **94.262 seconds**, with **6/14** API deferrals; reconstructed 14-case p95 is approximately **75.35 seconds** | `docs/b2_results/metrics.json` and per-case reconstructed API audit logs. These 14 validation cases are not the 400-case test and the API metrics were reconstructed from terminal output. |
+
+The B1 seeded run manifests record historical Git revision `63b0791` with a modified working tree. The SHA-256 of the training script is **`1aeebeabdeae913a12ad959731284675f044feb219cfe8fb239456a9f09dff6d`**, and matches the source included in the November 24 review archive. Subsequent source commits include the seed configurability change. These provenance limitations must be disclosed alongside the results. The supplementary Week 11 measurements are currently available only as local, Git-ignored output and are **not reproduced or preserved by the release tag alone**.
+
+**Selection outcome under the unchanged Week 7 rule:** The B1 diagnosis metric is strong, but its 18-case Storyboard B proxy has a deferral rate of 100% against a 30% maximum. The learned model also cannot satisfy an additional 15-percentage-point accuracy gain relative to the measured B0 of 94.75%, and representative repair-success and harmful-fix rates remain unmeasured. B2 has no comparable full-benchmark result. B0 therefore remains the only **supervised demonstration/fallback** candidate; none of the three architectures is approved for autonomous production repair.
+
 ## 4. Rollback Plan and Rehearsal
 
 **Rollback owner:** Designated experiment operator.  
@@ -208,14 +225,16 @@ These requirements govern release readiness; implementation of every operator-fa
 
 **Evidence locations**
 
+The supplemental Week 11 evidence is summarized here but its full local artifacts are not part of the Git release. A tag identifies the committed code, release plan, and tracked summaries; it does not archive Git-ignored `results/` files.
+
+- `results/week11/` — **local, Git-ignored** three-seed metrics, latency, Storyboard B cases, and error-case artifacts. These files were inspected for the presentation but are **not included in the tagged repository snapshot**. The summary figures and their limitations are recorded in Section 3.5; reproducing them requires the local artifacts and the versioned DVC dataset.
 - `WALKTHROUGH.md` — B0/B1 architecture, 400-case benchmark, runbook proposals, sandbox example, and reproducibility qualifications.
-- `MODEL_CARD.md` — B0 model definition, per-class metrics, and limitations.
 - `docs/experiments/walkthrough_v1/` — B0/B1 metrics, predictions, provenance, model artifacts, and sandbox audit.
 - `docs/b2_results/metrics.json` and `docs/b2_results/README.md` — preliminary B2 validation and operational results.
 - `docs/b2_results/f2_mock_summary.json` — mocked F2 verification; not a production repair success measurement.
 - `data/benchmark_1200_v1.dvc` — versioned benchmark data pointer.
 - `docs/release/b0_fallback_20261124_125454.json` — committed evidence of the first B0 fallback-path verification.
-- `results/switch_rehearsal_20261124_130353/` — second rehearsal outputs; locally stored under Git-ignored `results/` until copied into a tracked evidence location.
+- `docs/release/b0_switch_verification.json` and `docs/release/b1_switch_summary.json` — committed summary results for the B1-then-B0 local switching rehearsal. Full per-incident outputs remain local under Git-ignored `results/switch_rehearsal_20261124_130353/`.
 - CS6170 Week 10, *Deployment Strategies*, slides 8–20 — serving patterns, rollout strategies, promotion gates, rollback, and operator notification requirements.
 
 **Outstanding release prerequisites:**
