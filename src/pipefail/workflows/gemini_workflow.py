@@ -100,6 +100,16 @@ def run_gemini_workflow(*,recommender,gemini,incident_id,features,output_dir,
     audit={
         "incident_id":incident_id,"architecture":"LIGHTGBM_GEMINI",
         "gemini_model":gemini.model,"lightgbm":s["lightgbm"],"gemini":s["gemini"],
+        "api_metrics": {
+            "attempts": getattr(gemini, "last_attempts", None),
+            "latency_seconds": getattr(gemini, "last_latency_seconds", None),
+            "request_errors": getattr(gemini, "last_errors", []),
+            "diagnosis_response_success": not bool(s.get("error")),
+            "retry_recovered": (
+                (getattr(gemini, "last_attempts", 0) or 0) > 1
+                and not bool(s.get("error"))
+            ),
+        },
         "diagnosis":{**asdict(d),"failure_type":d.failure_type.value,
                      "recommended_action":d.recommended_action.value},
         "proposal":{**asdict(proposal),"failure_type":proposal.failure_type.value,
