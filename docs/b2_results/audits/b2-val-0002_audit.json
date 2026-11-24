@@ -1,0 +1,57 @@
+{
+  "incident_id": "b2-val-0002",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F5",
+    "score_uncalibrated": 0.9998600266859756
+  },
+  "gemini": {
+    "failure_type": "F5",
+    "recommended_action": "QUARANTINE_ROWS",
+    "affected_column": "distance",
+    "reason": "Invalid distance metric rate increased by 2.9 percentage points.",
+    "evidence": [
+      "invalid_distance_increase_pp: 2.9"
+    ],
+    "uncertainty": "Low"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0002",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F5",
+    "affected_step": null,
+    "affected_column": "distance",
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "Invalid distance metric rate increased by 2.9 percentage points.",
+      "invalid_distance_increase_pp: 2.9"
+    ],
+    "confidence": null,
+    "uncertainty": "Low"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0002",
+    "failure_type": "F5",
+    "action": "MANUAL_REVIEW",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "No verified automatic data-changing repair for this failure class.",
+      "Human operator must investigate or take the runbook's operational action."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 1,
+    "latency_seconds": 27.951,
+    "request_errors": [],
+    "diagnosis_response_success": true,
+    "retry_recovered": false
+  }
+}

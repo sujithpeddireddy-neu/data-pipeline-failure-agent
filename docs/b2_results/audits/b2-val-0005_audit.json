@@ -1,0 +1,59 @@
+{
+  "incident_id": "b2-val-0005",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F5",
+    "score_uncalibrated": 0.9998600266859756
+  },
+  "gemini": {
+    "failure_type": "F4",
+    "recommended_action": "QUARANTINE_ROWS",
+    "affected_column": "distance",
+    "reason": "The invalid distance value rate increased by 3.3 percentage points, indicating data quality issues, whereas late arrival flags are absent.",
+    "evidence": [
+      "invalid_distance_increase_pp: 3.3",
+      "late_arrival_flag: 0"
+    ],
+    "uncertainty": "low"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0005",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F4",
+    "affected_step": null,
+    "affected_column": "distance",
+    "recommended_action": "RERUN_MONTH",
+    "evidence": [
+      "The invalid distance value rate increased by 3.3 percentage points, indicating data quality issues, whereas late arrival flags are absent.",
+      "invalid_distance_increase_pp: 3.3",
+      "late_arrival_flag: 0"
+    ],
+    "confidence": null,
+    "uncertainty": "low"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0005",
+    "failure_type": "F4",
+    "action": "RERUN_MONTH",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "No verified automatic data-changing repair for this failure class.",
+      "Human operator must investigate or take the runbook's operational action."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 1,
+    "latency_seconds": 25.132,
+    "request_errors": [],
+    "diagnosis_response_success": true,
+    "retry_recovered": false
+  }
+}

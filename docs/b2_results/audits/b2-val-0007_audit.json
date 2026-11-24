@@ -1,0 +1,66 @@
+{
+  "incident_id": "b2-val-0007",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "CLEAN",
+    "score_uncalibrated": 0.6630185665452826
+  },
+  "gemini": {
+    "failure_type": "NONE",
+    "recommended_action": "MANUAL_REVIEW",
+    "affected_column": null,
+    "reason": "No pipeline failure detected; schema, row counts, null rates, and probe metrics are all normal.",
+    "evidence": [
+      "LightGBM model predicted CLEAN with uncalibrated score 0.663",
+      "missing_column_count = 0",
+      "type_change_count = 0",
+      "row_count_change_pct = 0.0",
+      "max_null_rate_increase_pp = 0.0"
+    ],
+    "uncertainty": "LOW"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0007",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "NONE",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "No pipeline failure detected; schema, row counts, null rates, and probe metrics are all normal.",
+      "LightGBM model predicted CLEAN with uncalibrated score 0.663",
+      "missing_column_count = 0",
+      "type_change_count = 0",
+      "row_count_change_pct = 0.0",
+      "max_null_rate_increase_pp = 0.0"
+    ],
+    "confidence": null,
+    "uncertainty": "LOW"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0007",
+    "failure_type": "NONE",
+    "action": "MANUAL_REVIEW",
+    "status": "NO_ACTION",
+    "rationale": [
+      "Run assessed as clean; no repair needed."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "NO_ACTION",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 2,
+    "latency_seconds": 42.797,
+    "request_errors": [
+      "504"
+    ],
+    "diagnosis_response_success": true,
+    "retry_recovered": true
+  }
+}

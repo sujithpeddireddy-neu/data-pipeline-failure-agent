@@ -1,0 +1,58 @@
+{
+  "incident_id": "b2-val-0000",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F1",
+    "score_uncalibrated": 0.9997623738583564
+  },
+  "gemini": {
+    "failure_type": "UNKNOWN",
+    "recommended_action": "MANUAL_REVIEW",
+    "affected_column": null,
+    "reason": "Gemini unavailable",
+    "evidence": [],
+    "uncertainty": "Human diagnosis required"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0000",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "UNKNOWN",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "Gemini unavailable"
+    ],
+    "confidence": null,
+    "uncertainty": "Human diagnosis required"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0000",
+    "failure_type": "UNKNOWN",
+    "action": "MANUAL_REVIEW",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "No verified automatic data-changing repair for this failure class.",
+      "Human operator must investigate or take the runbook's operational action."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "BLOCKED_GEMINI_ERROR",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 3,
+    "latency_seconds": 64.529,
+    "request_errors": [
+      "504",
+      "503",
+      "504"
+    ],
+    "diagnosis_response_success": false,
+    "retry_recovered": false
+  }
+}

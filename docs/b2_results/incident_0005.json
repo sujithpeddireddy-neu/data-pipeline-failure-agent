@@ -1,0 +1,42 @@
+{
+  "incident_id": "b2-val-0005",
+  "ground_truth": "F5",
+  "input_source": "reconstructed_from_validation_features_and_audit",
+  "gemini_input": {
+    "lightgbm": {
+      "label": "F5",
+      "score_uncalibrated": 0.9998600266859756
+    },
+    "features": {
+      "file_missing": 0,
+      "schema_comparison_available": 1,
+      "missing_column_count": 0,
+      "added_column_count": 0,
+      "type_change_count": 0,
+      "row_count_available": 1,
+      "row_count_change_pct": 0.0,
+      "max_null_rate_increase_pp": 0.0,
+      "max_null_rate_decrease_pp": 0.0,
+      "invalid_rate_available": 1,
+      "invalid_distance_increase_pp": 3.3,
+      "distance_probe_failed": 0,
+      "revenue_probe_failed": 0,
+      "arrival_available": 0,
+      "late_arrival_minutes": 0.0,
+      "late_arrival_flag": 0
+    },
+    "evidence": {}
+  },
+  "gemini_response": {
+    "failure_type": "F4",
+    "recommended_action": "QUARANTINE_ROWS",
+    "affected_column": "distance",
+    "reason": "The invalid distance value rate increased by 3.3 percentage points, indicating data quality issues, whereas late arrival flags are absent.",
+    "evidence": [
+      "invalid_distance_increase_pp: 3.3",
+      "late_arrival_flag: 0"
+    ],
+    "uncertainty": "low"
+  },
+  "analysis": "Gemini identified invalid distance values but incorrectly assigned F4 instead of F5. The row count change was zero. Gemini overrode a correct LightGBM diagnosis."
+}

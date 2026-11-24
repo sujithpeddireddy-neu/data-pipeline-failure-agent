@@ -1,0 +1,61 @@
+{
+  "incident_id": "b2-val-0001",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F1",
+    "score_uncalibrated": 0.9998785589132073
+  },
+  "gemini": {
+    "failure_type": "F1",
+    "recommended_action": "RENAME_COLUMN",
+    "affected_column": null,
+    "reason": "Schema drift detected with 1 missing column and 1 added column, consistent with a renamed column.",
+    "evidence": [
+      "missing_column_count = 1",
+      "added_column_count = 1"
+    ],
+    "uncertainty": "LOW"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0001",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F1",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "PAUSE_DOWNSTREAM",
+    "evidence": [
+      "Schema drift detected with 1 missing column and 1 added column, consistent with a renamed column.",
+      "missing_column_count = 1",
+      "added_column_count = 1"
+    ],
+    "confidence": null,
+    "uncertainty": "LOW"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0001",
+    "failure_type": "F1",
+    "action": "PAUSE_DOWNSTREAM",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "No verified automatic data-changing repair for this failure class.",
+      "Human operator must investigate or take the runbook's operational action."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 2,
+    "latency_seconds": 37.1,
+    "request_errors": [
+      "504"
+    ],
+    "diagnosis_response_success": true,
+    "retry_recovered": true
+  }
+}
