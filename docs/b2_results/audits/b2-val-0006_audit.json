@@ -1,0 +1,58 @@
+{
+  "incident_id": "b2-val-0006",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F2",
+    "score_uncalibrated": 0.999813121111959
+  },
+  "gemini": {
+    "failure_type": "F2",
+    "recommended_action": "CONVERT_TYPE",
+    "affected_column": null,
+    "reason": "Schema comparison detected 1 type change across dataset versions.",
+    "evidence": [
+      "type_change_count: 1",
+      "schema_comparison_available: 1"
+    ],
+    "uncertainty": "Low uncertainty on failure type F2 due to strong metric signal, though the specific column name is missing from log evidence."
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0006",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F2",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "Schema comparison detected 1 type change across dataset versions.",
+      "type_change_count: 1",
+      "schema_comparison_available: 1"
+    ],
+    "confidence": null,
+    "uncertainty": "Low uncertainty on failure type F2 due to strong metric signal, though the specific column name is missing from log evidence."
+  },
+  "proposal": {
+    "incident_id": "b2-val-0006",
+    "failure_type": "F2",
+    "action": "MANUAL_REVIEW",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "Schema evidence does not identify one isolated type change."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 1,
+    "latency_seconds": 19.052,
+    "request_errors": [],
+    "diagnosis_response_success": true,
+    "retry_recovered": false
+  }
+}

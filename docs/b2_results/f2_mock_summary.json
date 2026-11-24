@@ -1,0 +1,14 @@
+{
+  "test_mode": "MOCK_GEMINI",
+  "real_api_requests": 0,
+  "lightgbm_diagnosis": "F2",
+  "gemini_diagnosis": "F2",
+  "repair_action": "CONVERT_TYPE",
+  "proposal_status": "SANDBOX_ELIGIBLE",
+  "sandbox_status": "SUCCEEDED",
+  "validation_status": "PASSED",
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "candidate_unchanged": true,
+  "reference_unchanged": true
+}

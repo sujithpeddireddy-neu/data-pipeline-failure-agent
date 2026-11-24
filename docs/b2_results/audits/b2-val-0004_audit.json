@@ -1,0 +1,58 @@
+{
+  "incident_id": "b2-val-0004",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F2",
+    "score_uncalibrated": 0.9998838922178698
+  },
+  "gemini": {
+    "failure_type": "F2",
+    "recommended_action": "CONVERT_TYPE",
+    "affected_column": null,
+    "reason": "Schema schema comparison indicates 1 column data type change, leading to downstream probe failure.",
+    "evidence": [
+      "type_change_count: 1",
+      "revenue_probe_failed: 1"
+    ],
+    "uncertainty": "low"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0004",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F2",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "Schema schema comparison indicates 1 column data type change, leading to downstream probe failure.",
+      "type_change_count: 1",
+      "revenue_probe_failed: 1"
+    ],
+    "confidence": null,
+    "uncertainty": "low"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0004",
+    "failure_type": "F2",
+    "action": "MANUAL_REVIEW",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "Schema evidence does not identify one isolated type change."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 1,
+    "latency_seconds": 28.75,
+    "request_errors": [],
+    "diagnosis_response_success": true,
+    "retry_recovered": false
+  }
+}

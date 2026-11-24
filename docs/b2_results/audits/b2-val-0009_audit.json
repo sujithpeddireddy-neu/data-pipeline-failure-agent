@@ -1,0 +1,57 @@
+{
+  "incident_id": "b2-val-0009",
+  "architecture": "LIGHTGBM_GEMINI",
+  "gemini_model": "gemini-3.5-flash",
+  "lightgbm": {
+    "label": "F3",
+    "score_uncalibrated": 0.9997861289174353
+  },
+  "gemini": {
+    "failure_type": "F3",
+    "recommended_action": "QUARANTINE_ROWS",
+    "affected_column": null,
+    "reason": "Null rate increased significantly by 23.7 percentage points, indicating data quality degradation.",
+    "evidence": [
+      "max_null_rate_increase_pp: 23.7"
+    ],
+    "uncertainty": "low"
+  },
+  "diagnosis": {
+    "incident_id": "b2-val-0009",
+    "model_name": "LIGHTGBM_GEMINI",
+    "failure_type": "F3",
+    "affected_step": null,
+    "affected_column": null,
+    "recommended_action": "MANUAL_REVIEW",
+    "evidence": [
+      "Null rate increased significantly by 23.7 percentage points, indicating data quality degradation.",
+      "max_null_rate_increase_pp: 23.7"
+    ],
+    "confidence": null,
+    "uncertainty": "low"
+  },
+  "proposal": {
+    "incident_id": "b2-val-0009",
+    "failure_type": "F3",
+    "action": "MANUAL_REVIEW",
+    "status": "REVIEW_REQUIRED",
+    "rationale": [
+      "No verified automatic data-changing repair for this failure class.",
+      "Human operator must investigate or take the runbook's operational action."
+    ],
+    "parameters": {},
+    "human_approval_required": true
+  },
+  "sandbox": null,
+  "validation": null,
+  "review_status": "PENDING_HUMAN_REVIEW",
+  "live_data_modified": false,
+  "api_metrics": {
+    "source": "reconstructed_terminal_logs",
+    "attempts": 1,
+    "latency_seconds": 31.348,
+    "request_errors": [],
+    "diagnosis_response_success": true,
+    "retry_recovered": false
+  }
+}
