@@ -162,6 +162,12 @@ def main() -> None:
     parser.add_argument(
         "--output-dir", type=Path, default=ROOT / "results" / "lightgbm_baseline"
     )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=SEED,
+        help="Random seed for LightGBM training",
+    )
     args = parser.parse_args()
     data_dir = args.data_dir.resolve()
     out_dir = args.output_dir.resolve()
@@ -181,7 +187,7 @@ def main() -> None:
         "num_leaves": 15,
         "max_depth": 6,
         "min_child_samples": 5,
-        "random_state": SEED,
+        "random_state": args.seed,
         "n_jobs": 1,
         "verbosity": -1,
         "importance_type": "gain",
@@ -217,7 +223,7 @@ def main() -> None:
         "dataset_dvc_file": str(dvc_file.relative_to(ROOT)) if dvc_file.exists() else None,
         "dataset_dvc_metadata_sha256": sha256(dvc_file) if dvc_file.exists() else None,
         "csv_sha256": {s: sha256(data_dir / f"{s}.csv") for s in splits},
-        "seed": SEED,
+        "seed": args.seed,
         "features": FEATURES,
         "label_order": LABELS,
         "split_sizes": {s: len(df) for s, df in splits.items()},
